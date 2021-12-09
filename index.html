@@ -1,17 +1,26 @@
-<HTML>
+<!DOCTYPE html>
+<html>
+<body>
 
-<HEAD>
 
-<TITLE>Test Page</TITLE>
+<div id="placeholder"> </div>
 
-</HEAD>
+<p id="demo">Testing</p>
 
-<BODY BGCOLOR="FFFFFF">
+<script>
 
-<HR>
+function create(id, text) {
+	var tag = document.createElement("p");
+  	tag.setAttribute('id', id)
+   	var text = document.createTextNode(text);
+   	tag.appendChild(text);
+   	var element = document.getElementById("placeholder");
+   	element.appendChild(tag);
+}
 
-  <div id="a1">Hello World! </div>
+setTimeout(function() {create("p1", "paragraph1")}, 3000);
+  
+</script>
 
-</BODY>
-
-</HTML>
+</body>
+</html> 

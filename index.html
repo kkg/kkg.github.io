@@ -8,12 +8,15 @@
 <p id="demo">Testing</p>
 
 <script>
-
+var firstImg;
+var completeImg;
 function create(id, text) {
 	var tag = document.createElement("p");
   	tag.setAttribute('id', id)
+	firstImg=1;
    	var text = document.createTextNode(text);
    	tag.appendChild(text);
+	completeImg=2;
    	var element = document.getElementById("placeholder");
    	element.appendChild(tag);
 }

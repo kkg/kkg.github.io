@@ -20,6 +20,8 @@ function create(id, text) {
    	element.appendChild(tag);
 	stop1 = new Date();
 	firstImg = stop1 - start;
+	tag.appendChild(firstImg);
+	console.log("firstImg: " + firstImg)
 }
 
 start = new Date();

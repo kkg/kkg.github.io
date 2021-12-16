@@ -19,15 +19,15 @@ function create(id, text) {
    	var element = document.getElementById("placeholder");
    	element.appendChild(tag);
 	stop1 = new Date();
-	firstImg = stop1 - start;
-	text = document.createTextNode(firstImg);
+	diff = stop1 - start;
+	text = document.createTextNode(diff);
 	tag.appendChild(text);
-	console.log("firstImg: " + firstImg)
+	console.log("firstImg: " + diff)
 }
 
 start = new Date();
-setTimeout(function() {create("p1", "paragraph1")}, 3000);
-//setTimeout(function() {create("p2", "paragraph2")}, 15000);
+setTimeout(function() {create("p1", "time p1: ")}, 3000);
+setTimeout(function() {create("p2", "time p2: ")}, 15000);
 </script>
 	
 </body>

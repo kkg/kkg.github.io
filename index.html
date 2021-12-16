@@ -7,6 +7,8 @@
 <script>
 var firstImg;
 var completeImg;
+var start;
+var stop1;
 function create(id, text) {
 	var tag = document.createElement("p");
   	tag.setAttribute('id', id)
@@ -16,10 +18,13 @@ function create(id, text) {
 	completeImg=2;
    	var element = document.getElementById("placeholder");
    	element.appendChild(tag);
+	stop1 = new Date();
+	firstImg = stop1 - start;
 }
 
+start = new Date();
 setTimeout(function() {create("p1", "paragraph1")}, 3000);
-setTimeout(function() {create("p2", "paragraph2")}, 15000);
+//setTimeout(function() {create("p2", "paragraph2")}, 15000);
 </script>
 	
 </body>

@@ -5,27 +5,21 @@
 <div id="placeholder"> </div>
 
 <script>
-var firstImg;
-var completeImg;
-var start;
-var stop1;
 function create(id, text) {
 	var tag = document.createElement("p");
   	tag.setAttribute('id', id)
-	firstImg=1;
    	var text = document.createTextNode(text);
    	tag.appendChild(text);
-	completeImg=2;
    	var element = document.getElementById("placeholder");
    	element.appendChild(tag);
-	stop1 = new Date();
-	diff = stop1 - start;
+	var scriptStop = new Date();
+	diff = scriptStop - scriptStart;
 	text = document.createTextNode(diff);
 	tag.appendChild(text);
 	console.log("firstImg: " + diff)
 }
 
-start = new Date();
+scriptStart = new Date();
 setTimeout(function() {create("p1", "time p1: ")}, 3000);
 setTimeout(function() {create("p2", "time p2: ")}, 15000);
 </script>

@@ -6,17 +6,11 @@
 
 <script>
 function create(id, text) {
-	var tag = document.createElement("p");
+	var tag = document.createElement("input");
   	tag.setAttribute('id', id)
-   	var text = document.createTextNode(text);
-   	tag.appendChild(text);
+	tag.setAttribute('type', 'hidden')
    	var element = document.getElementById("placeholder");
    	element.appendChild(tag);
-	var scriptStop = new Date();
-	diff = scriptStop - scriptStart;
-	text = document.createTextNode(diff);
-	tag.appendChild(text);
-	console.log("firstImg: " + diff)
 }
 
 scriptStart = new Date();
